@@ -42,7 +42,7 @@ public class RoundRobinExecuteWithFailover<CL, R> extends AbstractExecuteWithFai
     }
 
     public int getNextHostIndex() {
-        return index++ % size;
+        return ++index % size;
     }
 
     public boolean canRetry() {
